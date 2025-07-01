@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --primary-color: oklab(76.027% -0.09629 -0.11763 / 0.962);
+      --card-bg: #fff;
+    }
+
+    body.dark-mode {
+      --bg-color: #1a1a1a;
+      --text-color: #f4f4f4;
+      --primary-color: #58adee;
+      --card-bg: #2a2a2a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.4s, color 0.4s;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    #theme-toggle {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: var(--card-bg);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .about, .skills, .projects, .contact {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .skills ul, .projects ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skills li, .projects li {
+      background: var(--card-bg);
+      margin-bottom: 10px;
+      padding: 10px;
+      border-left: 5px solid var(--primary-color);
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .skills li:hover, .projects li:hover {
+      transform: scale(1.02);
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input, .contact textarea {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      padding: 10px;
+      background-color: var(--primary-color);
+      color: rgb(249, 247, 247);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: var(--primary-color);
+      background: var(--card-bg);
+      border: 2px solid var(--primary-color);
+      padding: 10px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, background 0.3s, color 0.3s;
+      font-size: 18px;
+    }
+
+    .social-icons a:hover {
+      transform: rotate(360deg) scale(1.1);
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (min-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      .contact form {
+        max-width: 500px;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h3>Hello I'm</h3>
+    <h1>Darshan Wahurwagh</h1>
+    <p>Full Stack Developer | Freelancer | Content Creator</p>
+    <button id="theme-toggle">
+      <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
+    <div class="social-icons">
+      <a href="https://github.com/darshanwahurwagh" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/darshanwahurwagh" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/_d.a.r.s.h.y.a_" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I have completed my Bachelor’s degree and I'm currently pursuing Master’s in Computer Science. I have skills in HTML, CSS, JavaScript, Bootstrap, React, and Angular for frontend development. For backend, I use Java and C programming. I also work with databases like MySQL, PL/SQL, MongoDB, and Neo4j. I enjoy learning and exploring new technologies. I also use AI tools and OpenAPI in my work. Besides coding, I love creating content related to tech and development on LinkedIn. I’m looking for opportunities to grow, learn from real-world projects, and contribute to a good team. Thank you for visiting my profile.</p>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>FRONTEND: HTML, CSS, JavaScript, Bootstrap, React, Angular</li>
+      <li>BACKEND: Java, C Programming</li>
+      <li>DATABASE: MySQL, MongoDB, PL/SQL, Neo4j</li>
+      <li>TOOLS:  OpenAI, API Integration , Abobe </li>
+    </ul>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Portfolio Website - Responsive design using HTML, CSS</li>
+      <li>Student Dashboard - Built with React & Chart.js</li>
+      <li>E-commerce UI - Made using Angular and Firebase</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Darshan Wahurwagh. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    });
+  </script>
+</body>
+</html>
